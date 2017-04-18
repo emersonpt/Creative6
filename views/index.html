@@ -5,6 +5,8 @@
   <link rel="stylesheet" type="text/css" 
       href="/static/css/styles.css" />
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
 <script>
   var context;
   var enemies = [];
@@ -27,7 +29,14 @@
   
   document.onkeydown = move;
 
-function move(e) {
+
+function move(e, function {
+
+    if(guyX===580 && guyY===0){
+	newLevel(location.reload();
+    }
+}
+) {
 
     e = e || window.event;
 
@@ -51,10 +60,22 @@ function move(e) {
        if(guyX<580)
             guyX += guyDX;
     }
-    
-    if(guyX===580 && guyY===0)
-        location.reload();
+}
 
+
+function newLevel(){
+  var url = "/user/update"; 
+  $.post(url,function(data) {
+       console.log(data);
+  })
+  .done(function() { console.log('getJSON request succeeded!'); })
+  .fail(function(jqXHR, textStatus, errorThrown) { 
+    console.log('getJSON request failed! ' + textStatus); 
+    console.log("incoming "+jqXHR.responseText);
+  })
+  .always(function() { console.log('getJSON request ended!');
+  })
+  .complete(function() { console.log("complete"); });
 }
   
   function init()
@@ -108,7 +129,7 @@ function move(e) {
 <body onload="init()">
   <div ng-controller="myController">
     <h2>Welcome <%= username %></h2>
-	<h2>You're on level</h2>
+	<h2>You're on level <%= level %></h2>
 	
 	<div id="game-div">
              <canvas id="gameArea" width="600" height="300">	

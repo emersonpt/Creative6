@@ -68,16 +68,15 @@ exports.getUserProfile = function(req, res) {
 exports.updateUser = function(req, res){
   User.findOne({ _id: req.session.user })
   .exec(function(err, user) {
-    user.set('email', req.body.email);
-    user.set('color', req.body.color);
+    console.log(req.body);
+    user.set('level', user.level + 1);
     user.save(function(err) {
       if (err){
-        res.sessor.error = err;
+        res.session.error = err;
       } else {
-        req.session.msg = 'User Updated.';
-        req.session.color = req.body.color;
+	req.session.level = user.level;
+        res.redirect('/');
       }
-      res.redirect('/user');
     });
   });
 };

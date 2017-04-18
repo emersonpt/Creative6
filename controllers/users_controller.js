@@ -34,6 +34,13 @@ exports.signup = function(req, res){
 	  else{
 		  err = 'Sorry, username already taken.' ;
 	  }
+	  
+	  if(err){
+      req.session.regenerate(function(){
+        req.session.msg = err;
+        res.redirect('/login');
+      });
+	  }
   });
 };
 exports.login = function(req, res){

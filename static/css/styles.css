@@ -44,6 +44,9 @@ input[type=submit]{
 #game-div{
 	width: 600px ;
 	height: 300px ;
-	border:solid ;
 	margin: 0 auto ;
+}
+
+#gameArea {
+    border: 2px solid black;
 }

@@ -1,0 +1,49 @@
+html, body{
+	display: block ;
+	font-family: monospace ;
+	text-align: center ;
+	//background-image: url("GrizzlyBearRobinSilver.jpg") ;
+	background-color: white ;
+	//opacity: .5 ;
+	background-repeat: no-repeat ;
+}
+
+div.form-container{
+  display: inline-block;
+  border: none;
+  width: 280px;
+  border-radius:10px;
+  margin:10px;
+  text-align: center ;
+}
+form{
+  margin:10px;
+  text-align: center ;
+}
+label{ width:80px; display: inline-block;}
+input{
+  border: 3px solid rgb(0,0,0);
+  border-radius:5px;
+  padding:3px;
+}
+input[type=submit]{
+	font-family: monospace ;
+  width: 120px;
+  color:black;  background:white;
+  margin-top:15px;
+  margin-left:85px;
+}
+.button-holder{
+	text-align: center ;
+}
+
+#back-to-game{
+	font-size: 14pt ;
+}
+
+#game-div{
+	width: 600px ;
+	height: 300px ;
+	border:solid ;
+	margin: 0 auto ;
+}

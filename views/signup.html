@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>#neverendingsignup</title>
+  <link rel="stylesheet" type="text/css" 
+      href="/static/css/styles.css" />
+</head>
+<body>
+<h1>Sign up for...<br>The Game That Never Ends!</h1>
+  <div class="form-container">
+    <form method="POST" action="/signup">
+      <label>Username:</label>
+        <input type="text" name="username"><br>
+      <label>Password:</label>
+        <input type="password" name="password"><br>
+      <!--<label>Email:</label>
+        <input type="email" name="email"><br>-->
+      <input type="submit" value="Register">
+    </form>       
+  </div>
+  <p><strong>Note: There is no way to change your password at this time</strong></p>
+  <hr><%= msg %>
+</body>
+</html>

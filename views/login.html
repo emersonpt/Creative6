@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>#neverendinglogin</title>
+  <link rel="stylesheet" type="text/css" 
+        href="/static/css/styles.css" />
+</head>
+<body>
+<h1>This is...<br>The Game That Never Ends!</h1>
+<p><strong>(It just goes on and on my friends)<strong></p>
+  <div class="form-container">
+    <h2 class="form-header">Please Login or Sign Up Below</h2>
+    <form method="POST" action="/login">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+  </div>
+  <br>
+  <a href="/signup">Sign Up</a>
+  <hr><%= msg %>
+</body>
+</html>

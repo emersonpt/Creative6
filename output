@@ -1,0 +1,38 @@
+nohup: ignoring input
+login
+{ _id: 58eec4e7f1eddbd4280dc80d,
+  email: 'hibob@hibob.com',
+  hashed_password: 'XrZ/n4QJucP3OXNWM8vfkhITk9DhO9D0ZLGypqFa0tw=',
+  username: 'anderscj',
+  __v: 0,
+  color: 'yellowish brown' }
+Error: Can't set headers after they are sent.
+    at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:356:11)
+    at ServerResponse.header (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/response.js:718:10)
+    at ServerResponse.send (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/response.js:163:12)
+    at done (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/response.js:957:10)
+    at tryHandleCache (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/ejs/lib/ejs.js:208:10)
+    at View.exports.renderFile [as engine] (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/view.js:126:8)
+    at tryRender (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/application.js:639:10)
+    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/application.js:591:3)
+    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/response.js:961:7)
+    at /opt/bitnami/apache2/htdocs/lab6/auth/routes.js:36:9
+    at Layer.handle [as handle_request] (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/router/layer.js:95:5)
+    at next (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/router/layer.js:95:5)
+    at /opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/router/index.js:330:12)
+    at next (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express/lib/router/index.js:271:10)
+    at /opt/bitnami/apache2/htdocs/lab6/auth/node_modules/express-session/index.js:489:7
+    at tryCatcher (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise.successAdapter [as _fulfillmentHandler0] (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/bluebird/js/release/nodeify.js:23:30)
+    at Promise._settlePromise (/opt/bitnami/apache2/htdocs/lab6/auth/node_modules/bluebird/js/release/promise.js:566:21)
+login
+{ _id: 58eec4e7f1eddbd4280dc80d,
+  email: 'hibob@hibob.com',
+  hashed_password: 'XrZ/n4QJucP3OXNWM8vfkhITk9DhO9D0ZLGypqFa0tw=',
+  username: 'anderscj',
+  __v: 0,
+  color: 'yellowish brown' }

@@ -6,6 +6,9 @@ function hashPW(pwd){
          digest('base64').toString();
 }
 exports.signup = function(req, res){
+	User.findOne({ username: req.body.username })
+  .exec(function(err, user) {
+	  if(!user){
   console.log("Begin exports.signup");
   var user = new User({username:req.body.username});
   console.log("after new user exports.signup");
@@ -26,6 +29,11 @@ exports.signup = function(req, res){
 	  req.session.level = user.level ;
       res.redirect('/');
     }
+  });
+	  }
+	  else{
+		  err = 'Sorry, username already taken.' ;
+	  }
   });
 };
 exports.login = function(req, res){
